@@ -59,4 +59,14 @@ public class AlunoTest {
 
         assertEquals(matheus.toString(), aluno.toString());
     }
+
+    @Test
+    @DisplayName("Arredondamento das notas")
+    void arredodamentoNotas(){
+        aluno.setPrimeiraNota(2.005);
+        aluno.setSegundaNota(3.885);
+
+        assertEquals(2.0, aluno.getPrimeiraNota());
+        assertEquals(3.8, aluno.getSegundaNota());
+    }
 }

@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 public class Aluno {
     private final String nome;
     private double primeiraNota;
@@ -15,12 +17,16 @@ public class Aluno {
         return nome;
     }
 
+    private double arredondamento(double nota){
+        return Double.parseDouble(String.valueOf(nota).substring(0,3));
+    }
+
     public double getPrimeiraNota() {
-        return primeiraNota;
+        return arredondamento(primeiraNota);
     }
 
     public double getSegundaNota() {
-        return segundaNota;
+        return arredondamento(segundaNota);
     }
 
     public void setPrimeiraNota(double primeiraNota) {
