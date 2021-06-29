@@ -38,4 +38,13 @@ public class Aluno {
     public boolean isPassou(){
         return getMedia() >= 5;
     }
+
+    @Override
+    public String toString() {
+        return "Aluno{" +
+                "nome='" + nome + '\'' +
+                ", primeiraNota=" + primeiraNota +
+                ", segundaNota=" + segundaNota +
+                '}';
+    }
 }
